@@ -18,8 +18,8 @@ return new class extends Migration {
             $table->string("segundoNombre");
             $table->string("primerApellido");
             $table->string("segundoApellido");
-            $table->foreignId('idDepartamento')->constrained('departamentos')->onDelete('restrict');
-            $table->foreignId('idCargo')->constrained('cargos')->onDelete('restrict');
+            $table->foreignId('idDepartamento')->constrained('departamentos');
+            $table->foreignId('idCargo')->constrained('cargos');
             $table->timestamps();
         });
     }
